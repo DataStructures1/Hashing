@@ -173,7 +173,7 @@ public class HashObject {
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
 	 * 
 	 ******************************************************************/
-	private int customRehasherRS(int oldIndex) {
+	private int customRehasherAS(int oldIndex) {
 		return 0;
 	}
 	/******************************************************************
