@@ -68,9 +68,7 @@ public class HashObject {
 
 			// read next word
 			aWord = inFile.readLine();
-
 		}
-
 		inFile.close();
 	}
 
@@ -142,14 +140,50 @@ public class HashObject {
 		quadIncrement += 2;
 		return (oldIndex + quadIncrement) % capacity;
 	}
-
+	
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
 	 * 
 	 ******************************************************************/
-	private int customRehasher(int oldIndex) {
+	private int customRehasherDK(int oldIndex) {
 		return 0;
 	}
+	/******************************************************************
+	 * custom rehasher implements ? ? ? ? ? ? ? your design
+	 * 
+	 ******************************************************************/
+	private int customRehasherDA(int oldIndex) {
+		return 0;
+	}
+	/******************************************************************
+	 * custom rehasher implements ? ? ? ? ? ? ? your design
+	 * 
+	 ******************************************************************/
+	private int customRehasherLCU(int oldIndex) {
+		return 0;
+	}
+	/******************************************************************
+	 * custom rehasher implements ? ? ? ? ? ? ? your design
+	 * 
+	 ******************************************************************/
+	private int customRehasherAK(int oldIndex) {
+		return 0;
+	}
+	/******************************************************************
+	 * custom rehasher implements ? ? ? ? ? ? ? your design
+	 * 
+	 ******************************************************************/
+	private int customRehasherRS(int oldIndex) {
+		return 0;
+	}
+	/******************************************************************
+	 * custom rehasher implements ? ? ? ? ? ? ? your design
+	 * 
+	 ******************************************************************/
+	private int customRehasherRE(int oldIndex) {
+		return 0;
+	}
+
 
 	public int find(String aWord) {
 		// returns index of hashTable
