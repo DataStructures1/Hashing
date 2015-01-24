@@ -3,6 +3,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class HashDisplay extends Canvas {
+
+	// A comment by David.
 	
 	private int offsetV;				               //pixels
 	public static HashObject hashTable;
