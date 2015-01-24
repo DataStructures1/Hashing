@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class HashDriver {
    private static String[] collisionHandler = { "1-adjacency", "2-linear",
-		 "3-quadratic", "4-custom"  };
+		 "3-quadratic", "4-customDK", "5-customDA", "6-customLCU", "7-customAK" ,"8-customAS", "9-customRE" };
 
    public static void main(String[] args) {
 	  String str = (String) JOptionPane.showInputDialog(null,
