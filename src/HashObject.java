@@ -153,6 +153,8 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherDA(int oldIndex) {
+		//This is for David!
+		
 		return 0;
 	}
 	/******************************************************************
