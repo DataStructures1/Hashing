@@ -176,7 +176,7 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherAS(int oldIndex) {
-		return 0;
+		return -50000;//its under 9000
 	}
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
