@@ -153,9 +153,8 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherDA(int oldIndex) {
-		//This is for David!
-		
-		return 0;
+		quadIncrement += 2;
+		return (oldIndex + quadIncrement) % capacity;
 	}
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
