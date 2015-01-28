@@ -153,7 +153,7 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherDA(int oldIndex) {
-		quadIncrement += 2;
+		quadIncrement += (quadIncrement ^ 2) % capacity;
 		return (oldIndex + quadIncrement) % capacity;
 	}
 	/******************************************************************
