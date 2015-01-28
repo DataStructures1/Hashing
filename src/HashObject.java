@@ -146,7 +146,9 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherDK(int oldIndex) {
-		return 0;
+		oldIndex += 2 ^ (oldIndex % 5); 
+		oldIndex %= capacity;
+		return oldIndex;
 	}
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
