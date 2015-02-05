@@ -158,11 +158,12 @@ public class HashObject {
 		return 0;
 	}
 	/******************************************************************
-	 * custom rehasher implements ? ? ? ? ? ? ? your design
+	 * LCU rehasher implements both misfortune and the meaning of life
 	 * 
 	 ******************************************************************/
 	private int customRehasherLCU(int oldIndex) {
-		return 0;
+		quadIncrement += 13;
+		return (42*oldIndex + quadIncrement) % capacity ;
 	}
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
