@@ -1,6 +1,5 @@
 import java.lang.Math;
 
-
 public class HashObject {
 
 	public static HashDisplay hashDisplay;
@@ -142,7 +141,7 @@ public class HashObject {
 		quadIncrement += 2;
 		return (oldIndex + quadIncrement) % capacity;
 	}
-	
+
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
 	 * 
@@ -150,16 +149,16 @@ public class HashObject {
 	private int customRehasherDK(int oldIndex) {
 		return 0;
 	}
+
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
 	 * 
 	 ******************************************************************/
 	private int customRehasherDA(int oldIndex) {
-	//	quadIncrement += (quadIncrement ^ 2) % capacity;
-		
-		quadIncrement += Math.atan(quadIncrement) % capacity;
+		quadIncrement += (quadIncrement ^ 2) % capacity;
 		return (oldIndex + quadIncrement) % capacity;
 	}
+
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
 	 * 
@@ -167,6 +166,7 @@ public class HashObject {
 	private int customRehasherLCU(int oldIndex) {
 		return 0;
 	}
+
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
 	 * 
@@ -174,13 +174,15 @@ public class HashObject {
 	private int customRehasherAK(int oldIndex) {
 		return 0;
 	}
+
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
 	 * 
 	 ******************************************************************/
 	private int customRehasherAS(int oldIndex) {
-		return -50000;//its under 9000
+		return -50000;// its under 9000
 	}
+
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
 	 * 
@@ -188,7 +190,6 @@ public class HashObject {
 	private int customRehasherRE(int oldIndex) {
 		return 0;
 	}
-
 
 	public int find(String aWord) {
 		// returns index of hashTable
@@ -199,7 +200,8 @@ public class HashObject {
 
 		int hashIndex = hasher(aWord);
 		System.out.print(hashIndex + ", ");
-		while (hashTable[hashIndex] != null && !hashTable[hashIndex].equals(aWord)) {
+		while (hashTable[hashIndex] != null
+				&& !hashTable[hashIndex].equals(aWord)) {
 			hashIndex = hashChooser(hashIndex);
 			System.out.print(hashIndex + ", ");
 		}
