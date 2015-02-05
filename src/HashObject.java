@@ -169,7 +169,8 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherAK(int oldIndex) {
-		return 0;
+		quadIncrement += 11;
+		return (oldIndex + (quadIncrement)) % capacity;
 	}
 	/******************************************************************
 	 * custom rehasher implements ? ? ? ? ? ? ? your design
