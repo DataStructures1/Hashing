@@ -18,6 +18,8 @@ public class HashObject {
 		System.out.println(rehashChoice);
 		capacity = n;
 		quadIncrement = -1;
+		
+		
 		hashTable = new String[capacity];
 		hashmethod = rehashChoice;
 		// 0 means adjacency rehasher
@@ -190,7 +192,9 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherRE(int oldIndex) {
-		return 0;
+		quadIncrement += 3;
+		return (oldIndex + quadIncrement*2) % capacity;
+		
 	}
 
 	public int find(String aWord) {
