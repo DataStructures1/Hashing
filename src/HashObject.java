@@ -152,9 +152,10 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherDK(int oldIndex) {
-		oldIndex += 2 ^ (oldIndex % 5) + (oldIndex % 5); 
-		oldIndex %= capacity;
-		return oldIndex;
+		java.util.Random rGen = new java.util.Random(oldIndex + quadIncrement);
+		quadIncrement += 2;
+		oldIndex += rGen.nextInt(capacity) * Math.abs((rGen.nextInt() % capacity));
+		return oldIndex % capacity;
 	}
 
 	/******************************************************************
