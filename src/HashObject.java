@@ -8,6 +8,9 @@ public class HashObject {
 	private int keyCount;
 	private int collisionCount;
 	private int quadIncrement;
+	
+	private int asIncrement;
+	private int asCounter;
 
 	private String[] hashTable;
 	private EasyReader inFile;
@@ -18,8 +21,8 @@ public class HashObject {
 		System.out.println(rehashChoice);
 		capacity = n;
 		quadIncrement = -1;
-		
-		
+		asIncrement=-1;
+		asCounter = 0;
 		hashTable = new String[capacity];
 		hashmethod = rehashChoice;
 		// 0 means adjacency rehasher
@@ -185,7 +188,12 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherAS(int oldIndex) {
-		return -50000;// its under 9000
+		//exponential?
+		for(int k = 0; k < asCounter; k++)
+			asIncrement+=3;
+		asCounter++;
+			
+		return (oldIndex + asIncrement) % capacity;
 	}
 
 	/******************************************************************
