@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 
 public class HashObject {
 
@@ -153,7 +155,9 @@ public class HashObject {
 	 * 
 	 ******************************************************************/
 	private int customRehasherDA(int oldIndex) {
-		quadIncrement += (quadIncrement ^ 2) % capacity;
+	//	quadIncrement += (quadIncrement ^ 2) % capacity;
+		
+		quadIncrement += Math.atan(quadIncrement) % capacity;
 		return (oldIndex + quadIncrement) % capacity;
 	}
 	/******************************************************************
